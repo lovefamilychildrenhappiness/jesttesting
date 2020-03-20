@@ -1,14 +1,5 @@
-import jest from 'jest';
+import { runCLI } from 'jest';
 
-const options = {
-    projects: './example.test.js',
-    silent: true,
-};
-
-jest.runCLI(options, options.projects)
-    .then((success) => {
-        console.log(success);
-    })
-    .catch((failure) => {
-        console.error(failure);
-    });
+runCLI({}, ['example.test.js']).then( data => {
+    console.log('And the resp: ', resp);
+}).catch(e => console.log(e));
