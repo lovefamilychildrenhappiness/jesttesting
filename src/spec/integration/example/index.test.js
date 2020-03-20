@@ -1,4 +1,4 @@
-import Example from './example';
+import Example from '../../../app/example/index';
 
 describe('#add', () => {
     it('adds two numbers', async () => {
