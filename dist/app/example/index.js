@@ -43,10 +43,13 @@ var Example = /*#__PURE__*/function () {
                 success = false;
                 _context.prev = 1;
                 _context.next = 4;
-                return (0, _jest.runCLI)({}, ['../../spec/integration/example/.']);
+                return (0, _jest.runCLI)({
+                  testMatch: ['<rootDir>/dist/spec/integration/example/*.test.js']
+                }, [process.cwd()]);
 
               case 4:
                 resp = _context.sent;
+                console.log('has resp changed: ', resp);
                 result = resp.results.testResults.filter(function (result) {
                   return path.basename(result.testFilePath) === 'example.test.js';
                 });
@@ -54,23 +57,23 @@ var Example = /*#__PURE__*/function () {
                   return test.numFailingTests === 0;
                 });
                 console.log('the resp: ', success);
-                _context.next = 13;
+                _context.next = 14;
                 break;
 
-              case 10:
-                _context.prev = 10;
+              case 11:
+                _context.prev = 11;
                 _context.t0 = _context["catch"](1);
                 console.log('ERROR: ', _context.t0);
 
-              case 13:
+              case 14:
                 return _context.abrupt("return", success);
 
-              case 14:
+              case 15:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 10]]);
+        }, _callee, null, [[1, 11]]);
       }));
 
       function executeTest() {

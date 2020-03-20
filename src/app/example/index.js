@@ -10,7 +10,8 @@ export default class Example {
         let success = false;
 
         try {
-            const resp = await runCLI({}, ['../../spec/integration/example/.']);
+            const resp = await runCLI({ testMatch: ['<rootDir>/dist/spec/integration/example/*.test.js'] }, [process.cwd()]);
+
             const result = resp.results.testResults.filter( (result) => path.basename(result.testFilePath) === 'example.test.js' )
             success = result.every( test => test.numFailingTests === 0)
             console.log('the resp: ',  success);
