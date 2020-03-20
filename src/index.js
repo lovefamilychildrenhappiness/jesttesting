@@ -1,5 +1,5 @@
 import { runCLI } from 'jest';
 
-runCLI({}, ['example.test.js']).then( data => {
+runCLI({}, ['.']).then( resp => {
     console.log('And the resp: ', resp);
 }).catch(e => console.log(e));

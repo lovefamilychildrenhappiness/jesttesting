@@ -2,7 +2,7 @@
 
 var _jest = require("jest");
 
-(0, _jest.runCLI)({}, ['example.test.js']).then(function (data) {
+(0, _jest.runCLI)({}, ['.']).then(function (resp) {
   console.log('And the resp: ', resp);
 })["catch"](function (e) {
   return console.log(e);
