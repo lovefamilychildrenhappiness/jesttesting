@@ -1,4 +1,4 @@
-import Example from './example.js';
+import Example from './example';
 
 describe('#add', () => {
     it('adds two numbers', async () => {
